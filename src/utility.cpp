@@ -5,11 +5,11 @@ std::vector<char*> castArgs(const std::vector<std::string>& cmd){
     for (const auto& str : cmd) {
         args.push_back(const_cast<char*>(str.c_str()));
     }
-    args.push_back(nullptr); // Required for execvp
+    args.push_back(nullptr);
     return args;
 }
 
-std::vector<std::string> cmd2vec(const std::string& command, char delimiter = ' '){
+std::vector<std::string> cmd2vec(const std::string& command, char delimiter){
     std::vector<std::string> result;
     std::istringstream iss(command);
     std::string token;

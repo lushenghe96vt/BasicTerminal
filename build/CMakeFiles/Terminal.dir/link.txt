@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/Terminal.dir/src/main.cpp.o CMakeFiles/Terminal.dir/src/mypipe.cpp.o CMakeFiles/Terminal.dir/src/terminal.cpp.o CMakeFiles/Terminal.dir/src/utility.cpp.o -o Terminal 

@@ -11,13 +11,13 @@ int run_cmd(std::vector<char*> argv){
         return 1;
     }
 
-    if (pid == 0) {  // Child
+    if (pid == 0) {  // child
         pipe.redirect();
         execvp(argv[0], argv.data());
         perror("execvp failed");
         exit(1);
-    } else {  // Parent
-        wait(nullptr); // Wait for child to finish
+    } else {  // parent
+        wait(nullptr); // wait for child to finish
         std::string output = pipe.read();
         std::cout << output;
         return 0;

@@ -1,0 +1,5 @@
+/mnt/c/Users/Sheng Lu/Documents/School/Undergraduate/Junior Year/Spring Sem/ECE 3574/BasicTerminal/build/CMakeFiles/Terminal.dir
+/mnt/c/Users/Sheng Lu/Documents/School/Undergraduate/Junior Year/Spring Sem/ECE 3574/BasicTerminal/build/CMakeFiles/my_test.dir
+/mnt/c/Users/Sheng Lu/Documents/School/Undergraduate/Junior Year/Spring Sem/ECE 3574/BasicTerminal/build/CMakeFiles/test.dir
+/mnt/c/Users/Sheng Lu/Documents/School/Undergraduate/Junior Year/Spring Sem/ECE 3574/BasicTerminal/build/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Sheng Lu/Documents/School/Undergraduate/Junior Year/Spring Sem/ECE 3574/BasicTerminal/build/CMakeFiles/rebuild_cache.dir
