@@ -10,13 +10,13 @@ int run_cmd(std::vector<char*> argv){
         std::cerr << "Fork failed\n";
         return 1;
     }
-
     if (pid == 0) {  // child
         pipe.redirect();
         execvp(argv[0], argv.data());
         perror("execvp failed");
         exit(1);
-    } else {  // parent
+    } 
+    else {  // parent
         wait(nullptr); // wait for child to finish
         std::string output = pipe.read();
         std::cout << output;
@@ -25,15 +25,20 @@ int run_cmd(std::vector<char*> argv){
 }
 
 void terminal_app(){
-    std::string line;
+    char input[1024];
     while (true) {
-        std::cout << "$ ";
-        std::getline(std::cin, line);
-        if (line == "exit") break;
+        std::cout << "<< ";
+        std::cin.getline(input, sizeof(input));
 
-        auto tokens = cmd2vec(line);
-        if (tokens.empty()) continue;
-        auto args = castArgs(tokens);
+        if (std::cin.eof() || std::string(input) == "exit") {
+            break;
+        }
+        std::vector<std::string> tokens = cmd2vec(input, ' ');
+        if (tokens.empty()) {
+            continue;
+        }
+
+        std::vector<char*> args = castArgs(tokens);
         run_cmd(args);
     }
 }

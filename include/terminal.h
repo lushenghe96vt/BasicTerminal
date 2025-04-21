@@ -1,7 +1,4 @@
 // terminal.h
-#ifndef TERMINAL_H
-#define TERMINAL_H
-
 #include <vector>
 #include <unistd.h>
 #include <sys/wait.h>
@@ -20,5 +17,3 @@ int run_cmd(std::vector<char*> argv);
 // and executes the command using run_cmd().
 // Exits the loop when the user types "exit".
 void terminal_app();
-
-#endif // TERMINAL_H

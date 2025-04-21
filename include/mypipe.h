@@ -1,7 +1,4 @@
 //mypipe.h
-#ifndef MYPPIPE_H
-#define MYPPIPE_H
-
 #include <array>
 #include <string>
 #include <unistd.h>
@@ -33,5 +30,3 @@ class mypipe {
     // Typically used to capture the output that was redirected into the pipe.
     std::string read();
 };
-
-#endif // MYPPIPE_H

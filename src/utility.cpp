@@ -14,7 +14,9 @@ std::vector<std::string> cmd2vec(const std::string& command, char delimiter){
     std::istringstream iss(command);
     std::string token;
     while (std::getline(iss, token, delimiter)) {
-        if (!token.empty()) result.push_back(token);
+        if (!token.empty()){
+            result.push_back(token);
+        } 
     }
     return result;    
 }
